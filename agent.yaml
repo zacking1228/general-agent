@@ -3,6 +3,16 @@ name: general-agent
 version: "0.1.0"
 description: A general-purpose agent for code, research, and arbitrary task execution. Driven via gitagent / gitclaw.
 
+dependencies:
+  python:
+    # Must match whatever python3 bwrap actually exposes (the host's real
+    # /usr/bin/python3 for native testing; the Dockerfile-baked version in
+    # production) — a mismatch here builds numpy/pandas wheels for the wrong
+    # ABI, which fails at import time even though the mount itself succeeds.
+    version: "3.12"
+    packages:
+      - pandas==2.2.3
+
 model:
   preferred: anthropic:claude-sonnet-4-5-20250929
   constraints:

@@ -1,6 +1,6 @@
 gitagent_version: 2
 id: 6aa81f6502cc793f656e07a7
-name: general-agent
+name: general-git-agent
 description: A general-purpose agent for code, research, and arbitrary task execution.
   Driven via gitagent / gitclaw.
 model:

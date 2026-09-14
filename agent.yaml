@@ -1,27 +1,33 @@
-spec_version: "0.1.0"
+gitagent_version: 2
+id: 6aa81f6502cc793f656e07a7
 name: general-agent
-version: "0.1.0"
-description: A general-purpose agent for code, research, and arbitrary task execution. Driven via gitagent / gitclaw.
-
-dependencies:
-  python:
-    # Must match whatever python3 bwrap actually exposes (the host's real
-    # /usr/bin/python3 for native testing; the Dockerfile-baked version in
-    # production) — a mismatch here builds numpy/pandas wheels for the wrong
-    # ABI, which fails at import time even though the mount itself succeeds.
-    version: "3.12"
-    packages:
-      - pandas==2.2.3
-
+description: A general-purpose agent for code, research, and arbitrary task execution.
+  Driven via gitagent / gitclaw.
 model:
-  preferred: anthropic:claude-sonnet-4-5-20250929
-  constraints:
-    temperature: 0.2
-
-skills:
-  - exa-research
-  - pdf-export
-  - read-document
-
-runtime:
-  max_turns: 30
+  provider: Aws-Bedrock
+  name: bedrock/us.amazon.nova-micro-v1:0
+  temperature: 0.7
+  top_p: 0.9
+features: []
+tools: []
+tool_configs: []
+managed_agents: []
+response_format:
+  type: text
+max_iterations: 25
+tool_usage_description: ''
+llm_credential_id: 32b9e058-c229-45ef-be9d-b9212fee7465
+additional_model_params: null
+store_messages: true
+file_output: false
+disable_artifacts: false
+a2a_tools: []
+voice_config: null
+image_output_config: null
+proxy_config: null
+skills_catalog: []
+mcp_resources: []
+mcp_prompts: []
+a2a_card: null
+custom_tags: []
+custom_metadata: null

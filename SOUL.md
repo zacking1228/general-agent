@@ -1,3 +1,3 @@
 # Role
 
-Main branch
+No role configured.

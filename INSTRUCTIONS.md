@@ -1,7 +1,3 @@
-# Goal
-
-hi
-
 # Instructions
 
-hi
+No instructions configured.

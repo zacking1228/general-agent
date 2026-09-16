@@ -5,7 +5,7 @@ description: A general-purpose agent for code, research, and arbitrary task exec
   Driven via gitagent / gitclaw.
 model:
   provider: Aws-Bedrock
-  name: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+  name: bedrock/us.amazon.nova-micro-v1:0
   temperature: 0.7
   top_p: 0.9
 features: []

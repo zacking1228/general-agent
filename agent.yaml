@@ -9,25 +9,13 @@ model:
   temperature: 0.7
   top_p: 0.9
 features: []
-tools:
-- DeepWiki
-tool_configs:
-- tool_name: DeepWiki
-  tool_source: mcp
-  action_names:
-  - ask_question
-  - read_wiki_contents
-  - read_wiki_structure
-  server_id: 6aab29f6dd9cda02bf2b92d5
-  provider_uuid: ''
-  credential_id: ''
-  persist_auth: true
+tools: []
+tool_configs: []
 managed_agents: []
 response_format:
   type: text
 max_iterations: 25
-tool_usage_description: "{\n  \"DeepWiki\": [\n    \"ask_question\",\n    \"read_wiki_contents\"\
-  ,\n    \"read_wiki_structure\"\n  ]\n}"
+tool_usage_description: '{}'
 llm_credential_id: 32b9e058-c229-45ef-be9d-b9212fee7465
 additional_model_params: null
 store_messages: true

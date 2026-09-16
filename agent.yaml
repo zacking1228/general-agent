@@ -18,7 +18,7 @@ tool_configs:
   - ask_question
   - read_wiki_contents
   - read_wiki_structure
-  server_id: 6aa881cebd80b28cfa3c6159
+  server_id: 6aab29f6dd9cda02bf2b92d5
   provider_uuid: ''
   credential_id: ''
   persist_auth: true

@@ -1,6 +1,6 @@
 gitagent_version: 2
 id: 6aaabb6840f7dbc071c74531
-name: general-agent
+name: sharing-test-agent
 description: A general-purpose agent for code, research, and arbitrary task execution.
   Driven via gitagent / gitclaw.
 model:

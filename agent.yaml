@@ -1,4 +1,5 @@
-id: 6a9814c6aeefd59f48234646
+gitagent_version: 2
+id: 6aaabb6840f7dbc071c74531
 name: general-agent
 description: A general-purpose agent for code, research, and arbitrary task execution.
   Driven via gitagent / gitclaw.
@@ -9,6 +10,24 @@ model:
   top_p: 1.0
 features: []
 tools: []
+tool_configs: []
+managed_agents: []
 response_format:
   type: text
 max_iterations: 25
+tool_usage_description: ''
+llm_credential_id: lyzr_anthropic
+additional_model_params: null
+store_messages: true
+file_output: false
+disable_artifacts: false
+a2a_tools: []
+voice_config: null
+image_output_config: null
+proxy_config: null
+skills_catalog: []
+mcp_resources: []
+mcp_prompts: []
+a2a_card: null
+custom_tags: []
+custom_metadata: null

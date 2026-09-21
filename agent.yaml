@@ -10,89 +10,48 @@ model:
   top_p: 0.9
 features: []
 tools:
-- DeepWiki
-- linear-mcp-server-test-zac
+- Jira MCP Server
 tool_configs:
-- tool_name: DeepWiki
+- tool_name: Jira MCP Server
   tool_source: mcp
   action_names:
-  - ask_question
-  - read_wiki_contents
-  - read_wiki_structure
-  server_id: 6aab29f6dd9cda02bf2b92d5
-  provider_uuid: ''
-  credential_id: ''
-  persist_auth: true
-- tool_name: linear-mcp-server-test-zac
-  tool_source: mcp
-  action_names:
-  - get_attachment
-  - prepare_attachment_upload
-  - create_attachment_from_upload
-  - create_attachment
-  - delete_attachment
-  - list_agent_skills
-  - get_agent_skill
-  - list_comments
-  - save_comment
-  - delete_comment
-  - list_cycles
-  - get_document
-  - list_documents
-  - save_document
-  - extract_images
+  - server_info
+  - jira_info
   - get_issue
-  - list_issues
-  - save_issue
-  - list_issue_statuses
-  - get_issue_status
-  - list_issue_labels
-  - save_issue_label
-  - create_issue_label
-  - retire_issue_label
-  - restore_issue_label
-  - list_projects
-  - get_project
-  - save_project
-  - list_project_labels
-  - retire_project_label
-  - restore_project_label
-  - save_project_label
-  - list_release_pipelines
-  - list_releases
-  - get_release
-  - save_release
-  - list_release_notes
-  - get_release_note
-  - save_release_note
-  - get_diff
-  - list_diffs
-  - get_diff_threads
-  - save_diff_comment
-  - resolve_diff_thread
-  - delete_diff_comment
-  - submit_diff_review
-  - update_diff
-  - merge_diff
-  - share_issue
-  - unshare_issue
-  - list_milestones
-  - get_milestone
-  - save_milestone
-  - get_notifications
-  - mark_notification
-  - list_teams
-  - get_team
-  - list_templates
-  - get_template
-  - list_users
-  - get_user
-  - get_workspace
-  - search_documentation
-  - get_status_updates
-  - save_status_update
-  - delete_status_update
-  server_id: 6aadb74bdd9cda02bf2b92ee
+  - create_issue
+  - update_issue
+  - search_issues
+  - get_current_user
+  - get_comments
+  - add_comment
+  - update_comment
+  - delete_comment
+  - get_epic
+  - get_epic_issues
+  - create_epic
+  - add_issues_to_epic
+  - remove_issues_from_epic
+  - get_sprint
+  - get_sprint_issues
+  - get_board_sprints
+  - create_sprint
+  - update_sprint
+  - add_issues_to_sprint
+  - remove_issues_from_sprint
+  - delete_sprint
+  - get_transitions
+  - transition_issue
+  - transition_issue_by_name
+  - bulk_transition_issues
+  - get_fields
+  - find_field
+  - get_time_tracking
+  - set_time_estimate
+  - get_worklogs
+  - add_worklog
+  - update_worklog
+  - delete_worklog
+  server_id: 6aab17bfdd9cda02bf2b92d1
   provider_uuid: ''
   credential_id: ''
   persist_auth: true
@@ -100,29 +59,18 @@ managed_agents: []
 response_format:
   type: text
 max_iterations: 25
-tool_usage_description: "{\n  \"DeepWiki\": [\n    \"ask_question\",\n    \"read_wiki_contents\"\
-  ,\n    \"read_wiki_structure\"\n  ],\n  \"linear-mcp-server-test-zac\": [\n    \"\
-  get_attachment\",\n    \"prepare_attachment_upload\",\n    \"create_attachment_from_upload\"\
-  ,\n    \"create_attachment\",\n    \"delete_attachment\",\n    \"list_agent_skills\"\
-  ,\n    \"get_agent_skill\",\n    \"list_comments\",\n    \"save_comment\",\n   \
-  \ \"delete_comment\",\n    \"list_cycles\",\n    \"get_document\",\n    \"list_documents\"\
-  ,\n    \"save_document\",\n    \"extract_images\",\n    \"get_issue\",\n    \"list_issues\"\
-  ,\n    \"save_issue\",\n    \"list_issue_statuses\",\n    \"get_issue_status\",\n\
-  \    \"list_issue_labels\",\n    \"save_issue_label\",\n    \"create_issue_label\"\
-  ,\n    \"retire_issue_label\",\n    \"restore_issue_label\",\n    \"list_projects\"\
-  ,\n    \"get_project\",\n    \"save_project\",\n    \"list_project_labels\",\n \
-  \   \"retire_project_label\",\n    \"restore_project_label\",\n    \"save_project_label\"\
-  ,\n    \"list_release_pipelines\",\n    \"list_releases\",\n    \"get_release\"\
-  ,\n    \"save_release\",\n    \"list_release_notes\",\n    \"get_release_note\"\
-  ,\n    \"save_release_note\",\n    \"get_diff\",\n    \"list_diffs\",\n    \"get_diff_threads\"\
-  ,\n    \"save_diff_comment\",\n    \"resolve_diff_thread\",\n    \"delete_diff_comment\"\
-  ,\n    \"submit_diff_review\",\n    \"update_diff\",\n    \"merge_diff\",\n    \"\
-  share_issue\",\n    \"unshare_issue\",\n    \"list_milestones\",\n    \"get_milestone\"\
-  ,\n    \"save_milestone\",\n    \"get_notifications\",\n    \"mark_notification\"\
-  ,\n    \"list_teams\",\n    \"get_team\",\n    \"list_templates\",\n    \"get_template\"\
-  ,\n    \"list_users\",\n    \"get_user\",\n    \"get_workspace\",\n    \"search_documentation\"\
-  ,\n    \"get_status_updates\",\n    \"save_status_update\",\n    \"delete_status_update\"\
-  \n  ]\n}"
+tool_usage_description: "{\n  \"Jira MCP Server\": [\n    \"server_info\",\n    \"\
+  jira_info\",\n    \"get_issue\",\n    \"create_issue\",\n    \"update_issue\",\n\
+  \    \"search_issues\",\n    \"get_current_user\",\n    \"get_comments\",\n    \"\
+  add_comment\",\n    \"update_comment\",\n    \"delete_comment\",\n    \"get_epic\"\
+  ,\n    \"get_epic_issues\",\n    \"create_epic\",\n    \"add_issues_to_epic\",\n\
+  \    \"remove_issues_from_epic\",\n    \"get_sprint\",\n    \"get_sprint_issues\"\
+  ,\n    \"get_board_sprints\",\n    \"create_sprint\",\n    \"update_sprint\",\n\
+  \    \"add_issues_to_sprint\",\n    \"remove_issues_from_sprint\",\n    \"delete_sprint\"\
+  ,\n    \"get_transitions\",\n    \"transition_issue\",\n    \"transition_issue_by_name\"\
+  ,\n    \"bulk_transition_issues\",\n    \"get_fields\",\n    \"find_field\",\n \
+  \   \"get_time_tracking\",\n    \"set_time_estimate\",\n    \"get_worklogs\",\n\
+  \    \"add_worklog\",\n    \"update_worklog\",\n    \"delete_worklog\"\n  ]\n}"
 llm_credential_id: 32b9e058-c229-45ef-be9d-b9212fee7465
 additional_model_params: null
 store_messages: true
